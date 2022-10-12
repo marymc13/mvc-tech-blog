@@ -1,11 +1,11 @@
-<ol class="post-list">
+{{!-- <ol class="post-list">
     {{#each posts as |post|}}
   <li>
     <article class="post">
       <div class="title">
         <h2>
         <a href="/post/{{id}}">{{title}}</a>
-        <span>({{post.post_url}})</span>
+        <span>({{post.post_content}})</span>
         </h2>
       <div class="meta">
          Posted by {{User.username}} on {{createdAt}}
@@ -18,4 +18,22 @@
     </article>
   </li>
   {{/each}}
-</ol>
+</ol> --}}
+
+<div class="posts">
+  {{#each posts}}
+  <article class="card">
+    <div class="card-header flex-row justify-space-between">
+      <h2>
+        <a href="/post/{{id}}">{{title}}</a>
+      </h2>
+      <div>
+        Posted by {{User.username}} on {{createdAt}}
+      </div>
+    </div>
+    <div class="card-body">
+      {{body}}
+    </div>
+  </article>
+  {{/each}}
+</div>

@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
           include: [
             {
               model: Post,
-              attributes: ['id', 'title', 'post_url', 'created_at']
+              attributes: ['id', 'title', 'post_content', 'created_at']
             },
             // include the Comment model here:
             {
@@ -93,6 +93,17 @@ router.post('/', (req, res) => {
       res.json({ user: dbUserData, message: 'You are now logged in!' });
       });
   });
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
 });
     
 // PUT /api/users/1
