@@ -7,22 +7,23 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: rgb(238, 14, 14);
+    color: black;
   }
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: rgb(203, 174, 174);
     font-weight: bold;
     transition: color .1s;
+    font-size: 24px;
   }
   
   a:hover {
-    color: #3486eb;
+    color: rgba(159, 68, 68, 0.741);
   }
   
   button {
-    background-color: #225ca3;
+    background-color: brown;
     border: 0;
     padding: 1%;
     color: white;
@@ -30,10 +31,11 @@
     transition: background-color .1s;
     cursor: pointer;
     border-radius: 5px;
+  
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: rgba(159, 68, 68, 0.741);
   }
   
   .post-list {
@@ -49,12 +51,13 @@
   
   textarea:focus, input:focus {
     outline: none;
-    border: 1px solid #3486eb;
+    border: 1px solid brown;
   }
   
   textarea {
     min-width: 40%;
     min-height: 100px;
+    
   }
   
   form > div {
@@ -75,11 +78,13 @@
   }
   
   header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid brown;
+    background-color: brown;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
+    height: 100px;
   }
   
   header h1 {
@@ -97,8 +102,8 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
-    font-size: 100%;
+    color: rgb(203, 174, 174);
+    font-size: 24px;
     font-weight: bold;
     transition: color .1s;
     margin-left: 16px;
@@ -106,5 +111,5 @@
   
   .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: rgb(203, 174, 174);
   }

@@ -2,23 +2,14 @@
   <div class="title">
     <h2> {{post.title}}</h2>
     <span>{{post.post_content}}</span>
+    Posted by {{post.User.username}} on {{post.createdAt}}
   </div>
-  <div class="meta">
-    {{post.User.username}} on {{post.created_at}}
+  <div class="post">
+    {{post.comment_text}}
     |
-    <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
   </div>
 </article>
 
-{{!-- <form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">Add Comment</button>
-  </div>
-</form> --}}
 
 
 
@@ -35,5 +26,18 @@
   {{/each}}
 </div>
 
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
 
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+{{/if}}
+
+{{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
+{{/if}}
