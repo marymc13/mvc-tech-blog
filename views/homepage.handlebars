@@ -8,7 +8,7 @@
         <span>{{post.post_content}}</span>
         </h2>
       <div class="meta">
-         Posted by {{User.username}} on {{createdAt}}
+         Posted by {{User.username}} on {{format_date createdAt}}
         
         <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
       </div>
@@ -20,32 +20,3 @@
   {{/each}}
 </ol>
 
-{{!-- <div class="posts">
-  {{#each posts}}
-  <article class="card">
-    <div class="card-header flex-row justify-space-between">
-      <h2>
-        <a href="/post/{{id}}">{{title}}</a>
-      </h2>
-      <div>
-        Posted by {{User.username}} on {{createdAt}}
-      </div>
-    </div>
-    <div class="card-body">
-      {{body}}
-    </div>
-  </article>
-  {{/each}}
-</div> --}}
-
-{{!-- <div class="col-12">
-    <div class="card-columns">
-
-        {{#each posts as |post|}}
-        <div class="card">
-            {{> single-post post}}
-        </div>
-        {{/each}}
-        
-    </div> --}}
-{{!-- </div> --}}
