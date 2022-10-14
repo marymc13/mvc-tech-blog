@@ -20,7 +20,7 @@
   <ol>
     {{#each posts as |post|}}
     <li>
-      {{> single-post post}}
+      {{> post-info post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-content">Edit Post</a>
     </li>
     {{/each}}

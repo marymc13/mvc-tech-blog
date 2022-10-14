@@ -1,4 +1,4 @@
-<article class="post">
+{{!-- <article class="post">
   <div class="title">
     <h2> {{post.title}}</h2>
     <span>{{post.post_content }}</span>
@@ -8,7 +8,8 @@
     {{post.comment_text}}
     |
   </div>
-</article>
+</article> --}}
+{{>post-info post}}
 
 <div class="comments">
   {{#each post.comments}}
