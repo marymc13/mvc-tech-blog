@@ -2,12 +2,41 @@
     box-sizing: border-box;
   }
   
-  body, html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    color: black;
+/*main elements*/
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: black;
+}
+  header {
+    border-bottom: 1px solid rgb(59, 11, 11);
+    background-color: rgb(59, 11, 11);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    height: 100px;
+  }
+  
+  header h1 {
+    font-size: 1em;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    padding: 25%;
+    flex: 1;
+    padding: 2% 4%;
+  }
+  
+ footer {
+    font-size: 2em;
+    display: flex;
+    justify-content:center;
+    font-weight: bold;
   }
   
   a {
@@ -18,12 +47,9 @@
     font-size: 24px;
   }
   
-  a:hover {
-    color: rgba(159, 68, 68, 0.741);
-  }
-  
+  /*buttons*/
   button {
-    background-color: brown;
+    background-color: rgb(59, 11, 11);
     border: 0;
     padding: 1%;
     color: white;
@@ -37,65 +63,7 @@
   button:hover {
     background-color: rgba(159, 68, 68, 0.741);
   }
-  
-  .post-list {
-    margin: 0;
-    padding: 0;
-  }
-  
-  textarea, input {
-    padding: .5%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  textarea:focus, input:focus {
-    outline: none;
-    border: 1px solid brown;
-  }
-  
-  textarea {
-    min-width: 40%;
-    min-height: 100px;
-    
-  }
-  
-  form > div {
-    margin-bottom: 2%;
-  }
-  
-  form label {
-    display: block;
-  }
-  
-  .wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  header {
-    border-bottom: 1px solid brown;
-    background-color: brown;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1%;
-    height: 100px;
-  }
-  
-  header h1 {
-    font-size: 1em;
-  }
-  
-  main {
-    flex: 1;
-    padding: 2% 4%;
-  }
-  
+
   .btn-no-style {
     background: none;
     border: none;
@@ -113,3 +81,57 @@
     background: none;
     color: rgb(203, 174, 174);
   }
+  
+  /*forms*/
+  textarea, input {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid rgb(59, 11, 11);
+  }
+  
+  textarea:focus, input:focus {
+    outline: none;
+    border: 1px solid rgb(59, 11, 11);
+  }
+  
+  textarea {
+    min-width: 40%;
+    min-height: 100px;
+    
+  }
+  
+  form label {
+    display: block;
+  }
+  
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+ 
+  .post-list {
+   font-weight: bold;
+  color: rgb(59, 11, 11);
+  }
+
+  .comments {
+    display: -ms-flexbox;
+    justify-content: space-between;
+    
+  }
+
+ .meta {
+  font-weight: lighter;
+ }
+
+ .text {
+  font-weight: bold;
+ }
+
+ 
+

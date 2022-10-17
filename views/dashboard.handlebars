@@ -1,6 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MVC Tech Blog</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
 <section>
   <h2>Create New Post</h2>
-
   <form class="new-post-form">
     <div>
       <label for="post-title">Title</label>
@@ -14,6 +22,10 @@
   </form>
 </section>
 
+<main class="col-auto">
+    {{{ body }}}
+  </main>
+
 {{#if post.length}}
 <section>
   <h2>Your Posts</h2>
@@ -21,7 +33,8 @@
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-content">Edit Post</a>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-content">{{post.title}}
+      <span>{{format_date created_at}}</span></a>
     </li>
     {{/each}}
   </ol>
